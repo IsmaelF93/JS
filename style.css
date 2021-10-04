@@ -31,7 +31,7 @@
     border: 5px #333 solid;
     margin-bottom: 1rem;
   }
-  
+
   .male {
     border-color: steelblue;
     background-color: steelblue;
@@ -42,6 +42,11 @@
     background-color: pink;
     color: #333;
   }
+
+.neutral {
+    border-color: darkslategrey;
+    background-color: darkslategrey;
+}
   
   button {
     cursor: pointer;
