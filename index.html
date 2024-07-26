@@ -18,7 +18,7 @@
         <h3>Age: {{age}}</h3>
         <h3>Time: {{ thisisTime }}</h3>
 
-        <img :class="gender" width="200" height="100" v-bind:src="countryFlag" />
+        <img :class="gender" v-bind:src="countryFlag" width="200" height="100"  />
 
         <button v-on:click="getUser()" :class="gender">Get Random User</button>
         <button v-on:click="clearUser()" :class="gender">Clear User</button>

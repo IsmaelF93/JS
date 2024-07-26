@@ -2,6 +2,7 @@ const app = Vue.createApp({
 
     data(){
         return {
+            greeting: "",
             firstName: 'John',
             lastName: 'Doe',
             email: 'john@gmail.com',
@@ -12,6 +13,7 @@ const app = Vue.createApp({
             countryCode: 'Should be a country Name',
             age: 'Should be age',
             thisisTime: new Date().toJSON().slice(0, 19).replace(/-/g, '-').replace(/T/g, ' '),
+            countryFlag: ""
 
 
         }
