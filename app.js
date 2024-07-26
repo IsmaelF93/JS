@@ -13,16 +13,13 @@ const app = Vue.createApp({
             countryCode: 'Should be a country Name',
             age: 'Should be age',
             thisisTime: new Date().toJSON().slice(0, 19).replace(/-/g, '-').replace(/T/g, ' '),
-            countryFlag: ""
-
-
+            countryFlag: "",
         }
     },
     methods: {
         async getUser() {
             const res = await fetch('https://randomuser.me/api')
             const { results } = await res.json()
-
 
             this.greeting = 'Hello'
             this.firstName = results[0].name.first
@@ -34,18 +31,13 @@ const app = Vue.createApp({
             this.country = results[0].location.country
             this.age = results[0].dob.age
             this.countryFlag = `https://flagcdn.com/w320/${results[0].nat.toLowerCase()}.png`
-
-
         },
+
         async clearUser() {
             const res = await fetch('https://randomuser.me/api')
             const { results } = await res.json()
-            //console.log(results)
-
-
 
             this.greeting = 'Click to generate a user'
-
             this.firstName = null
             this.lastName = null
             this.email = null
@@ -53,10 +45,8 @@ const app = Vue.createApp({
             this.picture = 'error_image.jpg'
             this.city = null
             this.age = null
-
-
-
-
+            this.country = null
+            this.countryFlag = null
         },
     },
 })
